@@ -1,0 +1,3 @@
+This project contains a minimalist USB board for STM32F042F6P6. It has PA0-PA7 pins broken out and a LED connected to PA14, and can serve as a highly compact development board.
+
+The project also contains a blinky example, which may be used as a foundation for other projects.
