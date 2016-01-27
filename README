@@ -1,3 +1,18 @@
-This project contains a minimalist USB board for STM32F042F6P6. It has PA0-PA7 pins broken out and a LED connected to PA14, and can serve as a highly compact development board.
+This project contains a minimalist USB board for STM32F042F6P6. It has PA0-PA7
+pins broken out and a LED connected to PA14, and can serve as a highly compact
+development board.
 
-The project also contains a blinky example, which may be used as a foundation for other projects.
+My version of the board uses a LP5907 LDO. Other LDOs in SOT23-5 packages
+should also work, but you may need to cut the "bypass" pin of your LDO. (LP5907
+does not have a bypass pin, so it is grounded.)
+
+The project also contains a blinky example, which may be used as a foundation
+for other projects. To build, simply type "make", or read the header of the
+Makefile for details. To flash, connect BOOT0 ("BT0") to 3.3V ("3V3") on the
+board, plug the board into a USB slot, then type "make flash". Depending system
+configuration, you may need to use sudo. See
+
+  http://www.libopencm3.org/wiki/USB_DFU
+
+for details. Having a udev rule in place is highly recommended so you do not
+have to run make with root privilege.

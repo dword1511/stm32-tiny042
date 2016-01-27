@@ -16,7 +16,7 @@ int main(void) {
   while (1) {
     LED_FLIP();
 
-    for (i = 0; i < 1000000; i++) {
+    for (i = 0; i < 500000; i++) {
       __asm__("nop");
     }
   }
