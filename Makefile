@@ -51,7 +51,6 @@ $(DMP): $(ELF)
 
 %.hex: %.elf
 	$(OBJCOPY) -S -O ihex   $< $@
-	cp $@ $(PROGRAM)-$(BOARD).hex
 
 %.bin: %.elf
 	$(OBJCOPY) -S -O binary $< $@
